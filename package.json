@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha src/test/**/*.test.js --recursive --timeout 5000"
+    "test": "mocha --config src/utils/mocha.json --recursive --timeout 5000 'src/test/**/*.test.js'"
   },
   "keywords": [],
   "author": "",

@@ -13,20 +13,20 @@ Swan is a testing framework designed to test a Spotify API client application. T
 
 ## Installation
 
-Describe the installation process for your project, e.g.:
-
 git clone https://github.com/yourusername/yourproject.git
 cd yourproject
 npm install
 
 ## Usage
 
-Describe how to run the project, e.g.:
+At the moment there are no custom scripts other than running the test:
 npm start
+
+Additionally if you want to run a specific test you can a '.only' to an 'it' or 'describe' block. 
 
 ## Libraries
 
-A quick overview of the libraries/dependencies involved:
+A A quick overview of the libraries/dependencies involved:
 
 - [Express](https://expressjs.com/) - A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 - [Axios](https://axios-http.com/docs/intro): A promise-based HTTP client for making requests to RESTful APIs. It is lightweight and easy to use, with built-in support for handling common tasks like making GET and POST requests, handling errors, and more.
@@ -36,6 +36,24 @@ A quick overview of the libraries/dependencies involved:
 - [Sinon](https://sinonjs.org/): A powerful testing library that provides test spies, stubs, and mocks for JavaScript. It helps with test isolation and provides advanced functionality for testing complex scenarios.
 - [Supertest](https://www.npmjs.com/package/supertest): A library for testing Node.js HTTP servers. It provides a high-level abstraction for testing HTTP, allowing you to write tests for your API endpoints easily and quickly.
 - [Mochaawesome](https://www.npmjs.com/package/mochawesome): Mochawesome is a custom reporter for use with the Javascript testing framework, mocha. It runs on Node.js (>=10) and works in conjunction with mochawesome-report-generator to generate a standalone HTML/CSS report to help visualize your test runs.
+
+## Reporting
+
+By default, the src/data/report folder is added to the gitignore at the moment while I decide whether or not to add additional features. In the meantime, to enable Mochawesome reporting, follow these steps:
+
+1. Install mochawesome with `npm i mochawesome`.
+2. Create a `mocha.json` file in the `src/utils` directory.
+3. Add the following configuration to the `mocha.json` file:
+
+{
+  "require": "dotenv/config",
+  "reporter": "mochawesome",
+  "reporter-option": [
+    "reportDir=src/data/report",
+    "reportFilename=index",
+    "quiet=true"
+  ]
+}
 
 ## License
 [MIT](LICENSE)
