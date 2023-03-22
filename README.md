@@ -26,7 +26,7 @@ Additionally if you want to run a specific test you can a '.only' to an 'it' or 
 
 ## Libraries
 
-A A quick overview of the libraries/dependencies involved:
+A quick overview of the libraries/dependencies involved:
 
 - [Express](https://expressjs.com/) - A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 - [Axios](https://axios-http.com/docs/intro): A promise-based HTTP client for making requests to RESTful APIs. It is lightweight and easy to use, with built-in support for handling common tasks like making GET and POST requests, handling errors, and more.
@@ -39,7 +39,7 @@ A A quick overview of the libraries/dependencies involved:
 
 ## Reporting
 
-By default, the src/data/report folder is added to the gitignore at the moment while I decide whether or not to add additional features. In the meantime, to enable Mochawesome reporting, follow these steps:
+Mochawesome is a custom reporter for Mocha that generates an interactive, visually appealing HTML report from your test results. It includes information about test duration, passed/failed/skipped tests, and even supports embedding screenshots for failed tests. By default, the src/data/report folder is added to the gitignore at the moment while I decide whether or not to add additional features. In the meantime, to enable Mochawesome reporting, follow these steps:
 
 1. Install mochawesome with `npm i mochawesome`.
 2. Create a `mocha.json` file in the `src/utils` directory.
